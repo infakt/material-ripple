@@ -325,7 +325,7 @@ public class MaterialRippleLayout extends FrameLayout {
                     setRippleAlpha(rippleAlpha);
                 }
                 if (animationEndRunnable != null && rippleDelayClick) {
-                    animationEndRunnable.run();
+                    post(animationEndRunnable);
                 }
                 childView.setPressed(false);
             }
